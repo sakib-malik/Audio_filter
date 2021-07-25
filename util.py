@@ -57,7 +57,6 @@ def apply_filter(b, a, X):
 # n = np.arange(N)
 # x = np.sin(2 * np.pi * n / N)
 # x_noise = x + np.random.normal(0, 0.05, len(x))
-# plt.plot(x_noise)
 # from scipy import signal
 # b, a = np.array([1, -1]) , np.array([2])   # HP
 # b, a = np.array([1, 1]) , np.array([2])   # LP
@@ -67,7 +66,6 @@ def apply_filter(b, a, X):
 
 # y = apply_filter(b, a, x_noise)
 # import matplotlib.pyplot as plt
-# # plt.plot(x)
 # plt.plot(x_noise)
 # plt.plot(y)
 # plt.show()
