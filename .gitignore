@@ -1,5 +1,5 @@
 input.wav
 output.wav
 venv/
-.idea/
+*.idea/
 
