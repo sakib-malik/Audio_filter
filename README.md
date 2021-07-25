@@ -1,4 +1,4 @@
-# Audio_filter
+# audio_filter (course project EE301A)
 
 ## Real time audio filtering with custom filters
 
