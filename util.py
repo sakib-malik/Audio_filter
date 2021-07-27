@@ -43,6 +43,15 @@ def apply_filter(b, a, X):
     #     Y(z) = -------------------------------- X(z)
     #                      -1              -N
     #          a[0] + a[1]z  + ... + a[N] z
+    mn_up = min(b)
+    mn_down = min(a)
+    scale = 1
+    if mn_up < 1 and mn_down < 1:
+        scale = mn_up / (mn_down + 1e-12)
+    elif mn_up < 1:
+        scale = mn_up
+    elif mn_down < 1:
+        scale = mn_down
 
     zeros = np.poly1d(b).roots
     poles = np.poly1d(a).roots
@@ -55,7 +64,7 @@ def apply_filter(b, a, X):
 # n = np.arange(N)
 # x = np.sin(2 * np.pi * n / N)
 # x_noise = x + np.random.normal(0, 0.05, len(x))
-from scipy import signal
+# from scipy import signal
 # b, a = np.array([1, -1]) , np.array([2])   # HP
 # b, a = np.array([1, 1]) , np.array([2])   # LP
 # b, a = np.array([0.25, 0.25]) , np.array([1, -0.5]) # LP
