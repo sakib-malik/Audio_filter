@@ -16,7 +16,7 @@ def get_transfer_function():
 
 b, a = get_transfer_function()      # LCCDE Coefficients
 
-save = input("Do you wanna just save the video instead of playing immediately (y/n) ? : ")
+save = input("Do you wanna just save the audio instead of playing immediately (y/n) ? : ")
 
 time = input("Please provide time for the recording : ")
 
