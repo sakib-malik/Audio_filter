@@ -49,7 +49,7 @@ def apply_filter(b, a, X):
     poles = np.poly1d(a).roots
     H = dft_of_Hz(zeros, poles, samples=len(X))
     Y = np.real(np.fft.ifft(np.fft.fft(X) * H))
-    return (Y / (max(Y) - min(Y))) * (max(X) - min(X))
+    return (Y * (max(X))) / max(Y)
 
 # EXAMPLES OF WORKING
 
