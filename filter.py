@@ -14,7 +14,9 @@ def get_transfer_function():
     return num, deno
 
 
-b, a = get_transfer_function()      # LCCDE Coefficients
+b, a = get_transfer_function() # LCCDE Coefficients
+# from scipy import signal
+# b, a = signal.butter(3, 0.05)
 
 save = input("Do you wanna just save the audio instead of playing immediately (y/n) ? : ")
 
