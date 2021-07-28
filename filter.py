@@ -1,3 +1,4 @@
+from numpy.lib.function_base import _SIGNATURE
 import pyaudio
 import wave
 import numpy as np
@@ -15,6 +16,10 @@ def get_transfer_function():
 
 
 b, a = get_transfer_function() # LCCDE Coefficients
+
+# from scipy import signal
+
+# b , a = signal.butter(3, 0.05)
 
 save = input("Do you wanna just save the audio instead of playing immediately (y/n) ? : ")
 
